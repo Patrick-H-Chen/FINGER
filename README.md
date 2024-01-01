@@ -18,6 +18,7 @@ We have tested that it could be built on AWS instances used in the paper. You on
 
 500 is the M hyper-parameter, and 10 is efS in HSNW paper. 24 is the #threads to run, so you can keep it as 24 for index building (first time running) but to profile it needs to be changed to 1. The trailing 0 0 1 0 is legacy code which I haven't cleaned yet. Overall, we use the following script to run ann-benchmark
 
+```
 DATA=(fashion sift gist)
 for data in ${DATA[@]}; do
     MLIST=(4 8 12 24 36 48 64 96)
@@ -29,7 +30,9 @@ for data in ${DATA[@]}; do
         done
     done
 done
+```
 
+```
 DATA=(glove nytimes deep)
 for data in ${DATA[@]}; do
     MLIST=(4 8 12 24 36 48 64 96)
@@ -41,4 +44,4 @@ for data in ${DATA[@]}; do
         done
     done
 done
-
+```
